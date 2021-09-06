@@ -1,0 +1,34 @@
+version: '3'
+
+services:
+  backend:
+    image: "tiangolo/uvicorn-gunicorn-fastapi:python3.7"
+    build: ./backend
+    ports:
+      - "5000:5000"  
+    volumes:
+      - ./backend:/backend
+    environment:
+      - APP_NAME=DATASTONE-CURRENCY-MONEY
+    container_name: micro-service-currency
+    networks:
+      - datastone-network
+
+  frontend:
+    depends_on:
+      - backend
+    build: 
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    container_name: vue-ui
+    volumes:
+       - ./frontend:/usr/src/app/my-app
+       - /usr/src/app/my-app/node_modules
+    networks:
+      - datastone-network
+
+networks: 
+  datastone-network:
+    driver: bridge
