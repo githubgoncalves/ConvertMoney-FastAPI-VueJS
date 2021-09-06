@@ -4,10 +4,9 @@ Esse projeto foi um desafio técnico da empresa Data Stone, e faz conversão mon
 ## Forex-Python
 Blibioteca utilizada para fazer as conversões foi o [forex-python](https://pythonrepo.com/repo/MicroPyramid-forex-python-python-e-commerce-and-payments).
 
-### Fonte da moeda:
+### Fonte da Biblioteca:
 [ratesapi](https://ratesapi.io) é uma API gratuita para as taxas de câmbio atuais e históricas publicadas pelo Banco Central Europeu. As taxas são atualizadas diariamente às 3PM CET.
 
-### Fonte de preço Bitcoin:
 Preços do Bitcoin calculados a cada minuto. Para obter mais informações, visite [CoinDesk API](http://www.coindesk.com/api/).
 
 ## Recursos
@@ -19,7 +18,10 @@ Preços do Bitcoin calculados a cada minuto. Para obter mais informações, visi
 
 ### Configurar
 1. Clone este repositório
-2. Faça cd na raiz do projeto e execute docker-compose up --build -d.
+2. Faça cd na raiz do projeto e execute:
+```bash
+docker-compose up --build -d
+```
 
 ### Aplicativo WEB - Frontend
 http://localhost:8080/
@@ -60,9 +62,6 @@ npm install
 ```
 npm run serve
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
 
 
 
