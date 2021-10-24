@@ -1,5 +1,5 @@
 # Fullstack Convert CurrencyMoney 
-Esse projeto foi um desafio técnico da empresa Data Stone, e faz conversão monetária.
+Esse projeto é uma API em Flask e Vuejs que faz conversão monetária.
 
 ## Forex-Python
 Blibioteca utilizada para fazer as conversões foi o [forex-python](https://pythonrepo.com/repo/MicroPyramid-forex-python-python-e-commerce-and-payments).

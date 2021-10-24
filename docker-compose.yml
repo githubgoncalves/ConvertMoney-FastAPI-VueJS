@@ -9,10 +9,10 @@ services:
     volumes:
       - ./backend:/backend
     environment:
-      - APP_NAME=DATASTONE-CURRENCY-MONEY
+      - APP_NAME=API-CURRENCY-MONEY
     container_name: micro-service-currency
     networks:
-      - datastone-network
+      - api-network
 
   frontend:
     depends_on:
@@ -27,8 +27,8 @@ services:
        - ./frontend:/usr/src/app/my-app
        - /usr/src/app/my-app/node_modules
     networks:
-      - datastone-network
+      - api-network
 
 networks: 
-  datastone-network:
+  api-network:
     driver: bridge

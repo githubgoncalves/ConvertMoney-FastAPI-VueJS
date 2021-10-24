@@ -21,4 +21,4 @@ app.include_router(convert_currency_controller.route, prefix='/api')
 @app.get('/',status_code=status.HTTP_200_OK,response_model=str)
 def index():
     app_name = os.getenv("APP_NAME")
-    return JSONResponse(content="{f'API {app_name} DISPONIVEL V2!'}")
+    return JSONResponse(content="{f'API {app_name} DISPONIVEL!'}")
